@@ -1,8 +1,8 @@
-#This is my blog
+# This is my blog
 
 ---
 
-####Powered by [Jekyll](https://jekyllrb.com/) & Design by [riggraz](https://github.com/riggraz/no-style-please) & Modified by [Wang Yu](https://github.com/wangyu-1999/wangyu-1999.github.io)
+#### Powered by [Jekyll](https://jekyllrb.com/) & Design by [riggraz](https://github.com/riggraz/no-style-please) & Modified by [Wang Yu](https://github.com/wangyu-1999/wangyu-1999.github.io)
 
 ---
 
@@ -16,13 +16,13 @@
 
 ### 目录
 
-在**_data**文件夹下的**menu.yml**中进行设置
+在 **_data** 文件夹下的 **menu.yml** 中进行设置
 
 ---
 
 ### 上传
 
-上传到**_post**文件中，注意需要以
+上传到 **_post** 文件中，注意需要以
 
 	年-月-日-标题.markdown
 
