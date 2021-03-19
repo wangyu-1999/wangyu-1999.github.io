@@ -1,2 +1,3 @@
-### Hello world
-this is a page
+---
+layout: home
+---
