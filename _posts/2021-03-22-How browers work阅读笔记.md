@@ -1,0 +1,51 @@
+---
+layout: post
+category: star
+---
+
+# [How browers work](http://taligarsiel.com/Projects/howbrowserswork1.htm)
+
+这是一篇非常经典的解释浏览器工作原理的论文，网上很多相关的文章都是翻译之后再演绎的结果，今天花点时间读一下原文，写一下相关的笔记。笔记只会记录我读完每个部分觉得有必要记录的东西，而不会翻译文稿，所以希望更详细的了解可以去读原文。
+
+# 目录
+
+- [概述](#概述)
+- [编译](#编译)
+- [建立render树](#建立render树)
+
+---
+
+# [概述](#概述)
+
+这一部分需要知道的是浏览器的工作大致可以分为四个阶段，解析DOM树和样式树->根据两者生成render树->计算布局->绘制
+
+有一点很多文章可能忽略了，就是这个步骤并不是线性的进行的，并不是等全部HTML解析完成之后才进行下一步，浏览器会尽可能快的展示内容，所以会先让其一部分内容展示出来，其他的部分可能还在前面的步骤。原文是这么描述的：
+> It's important to understand that this is a gradual process. For better user experience, the rendering engine will try to display contents on the screen as soon as possible. It will not wait until all HTML is parsed before starting to build and layout the render tree. Parts of the content will be parsed and displayed, while the process continues with the rest of the contents that keeps coming from the network.
+
+---
+
+# [编译](#编译)
+
+这一章节主要先介绍了一下编译的过程，有编译原理基础的同学可以跳过介绍编译的部分。
+
+需要注意的是，HTML不能采用常规的自上而下的分析或者自下而上分析。
+
+- HTML不是上下文无关语法，这决定大多数语言的编译器无法发挥作用。
+- 同时相比XML有着较为宽松的语法风格，为了方便网页编写者，文档中会对一些不符合规范的写法兼容，这导致XML的编译器也无法发挥作用。
+- 除此之外，多数编译器默认代码段是不会发生变动的，而在HTML中，document.write方法使得在编译过程中也可以修改代码。
+
+HTML编译词法分析的过程就是通过一个DFA来识别各个token的属性，是开始、文本或者是结束；建DOM树的过程则是利用一个类似栈的结构来看是否匹配。
+
+还有一点在很多文章中被误传的就是加载过程的分析。当HTML、CSS和JS同时需要加载的时候。JS阻塞HTML没有问题，但是CSS阻塞JS这个过程Firefox和Webkit处理的方式不同，Firefox是先要求加载CSS再加载JS,但是Webkit只在发生冲突时才阻塞。原文如下:
+> It seems to be an edge case but is quite common. Firefox blocks all scripts when there is a style sheet that is still being loaded and parsed. Webkit blocks scripts only when they try to access for certain style properties that may be effected by unloaded style sheets.
+
+---
+
+# [建立render树](#建立render树)
+
+在建立render树的时候，有一点容易被忽视，那就是浮动元素和绝对定位的元素会安排在特殊的地方，render树原本的地方只会安排一个占位框（frame）。
+
+---
+
+给我留言：[issues](https://github.com/wangyu-1999/wangyu-1999.github.io/issues/new)
+
