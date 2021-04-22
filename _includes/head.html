@@ -2,18 +2,26 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--搜索引擎设置-->
+  <!-- 神马搜索 -->
+  <meta
+    name="shenma-site-verification"
+    content="36515523d294e3b9ac51470514b95d0f_1619104718"
+  />
+  <!-- 字节搜索 -->
+  <meta name="bytedance-verification-code" content="goiuPbMMzfSO95mdy5MK" />
 
   <title>
-    {%- if page.title -%}
-      {{ page.title }}
-    {%- else -%}
-      {{ site.title }}
-    {%- endif -%}
+    {%- if page.title -%} {{ page.title }} {%- else -%} {{ site.title }} {%-
+    endif -%}
   </title>
 
-  {%-seo title=false-%}
-  {%-feed_meta-%}
+  {%-seo title=false-%} {%-feed_meta-%}
 
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="{{ site.favicon | relative_url }}"
+  />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
 </head>
