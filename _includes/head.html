@@ -12,6 +12,11 @@
   <meta name="bytedance-verification-code" content="goiuPbMMzfSO95mdy5MK" />
   <!-- 百度搜索 -->
   <meta name="baidu-site-verification" content="code-RuvJbCxVTs" />
+  <!-- 谷歌搜索 -->
+  <meta
+    name="google-site-verification"
+    content="a8Vsy1HXkWjntRXX9yT7ShLKZu9oR6mmMslfwTsBSec"
+  />
 
   <title>
     {%- if page.title -%} {{ page.title }} {%- else -%} {{ site.title }} {%-
@@ -26,4 +31,15 @@
     href="{{ site.favicon | relative_url }}"
   />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+  <script>
+    // 字节的爬虫脚本
+    (function () {
+      var el = document.createElement('script');
+      el.src =
+        'https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?b357f1ed2a688909d06d2cfabe1835bb2680b49105dfb00261c7b4ba68e3607460ee6cf0ba1faa1fd426c5503818ff173d2859afc1f3c0c26a1fdfd487b8b599cce3a6dd9046b785a9d577e900bd16c5';
+      el.id = 'ttzz';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(el, s);
+    })(window);
+  </script>
 </head>
