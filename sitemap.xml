@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+
+<url>
+ <loc>https://wangyu-1999.github.io/</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://github.com/wangyu-1999</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://jekyllrb.com/</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://github.com/wangyu-1999/wangyu-1999.github.io</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://github.com/riggraz/no-style-please</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://github.com/wangyu-1999/wangyu-1999.github.io/issues/new</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://wangyu-1999.github.io/%E8%B7%A8%E5%9F%9F%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://wangyu-1999.github.io/%E5%B0%86%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://wangyu-1999.github.io/%E7%AC%94%E8%AE%B0-how-browers-work.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://wangyu-1999.github.io/%E6%98%A5%E6%8B%9B%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0-2.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://wangyu-1999.github.io/%E6%98%A5%E6%8B%9B%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0.html</loc>
+ <priority>0.3</priority>
+ <lastmod>2021-04-24</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+</urlset>
