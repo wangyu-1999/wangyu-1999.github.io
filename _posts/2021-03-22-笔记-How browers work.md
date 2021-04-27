@@ -71,7 +71,4 @@ HTML编译词法分析的过程就是通过一个DFA来识别各个token的属�
 
 这篇文章总体而言有点虎头蛇尾，对于布局和绘制的部分讲的太简略了，但是前面的例子讲的很清楚，后面的东西之后有好的材料的话还要继续学习。
 
----
-
-给我留言：[issues](https://github.com/wangyu-1999/wangyu-1999.github.io/issues/new)
 
