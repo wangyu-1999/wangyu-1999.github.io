@@ -1,5 +1,5 @@
 ---
 layout: archive
 which_category: tech
-title: All posts of category 'tech'
+title: 技术博客
 ---
