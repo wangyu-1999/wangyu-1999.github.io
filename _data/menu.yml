@@ -5,12 +5,12 @@ entries:
   - title: 关于我
     entries:
       - title: 出生于1999年
-      - title: 希望一直做一个正直、有好奇心的人
-      - title: 希望从事前端开发的相关工作
+      - title: 一个正直、有好奇心、热爱生活的人
+      - title: 从事前端开发的相关工作，帮助用户获得更好的交互体验
       - title: 希望结识友善的开发者朋友
       - title: "您可以通过<a href = 'https://github.com/wangyu-1999'>Github</a>
-          或者<a href = '#'>wangyu2021@foxmail.com</a>联系我"
-      - title: "您也可以在该项目对应的<a = href = 'https://github.com/wangyu-1999/wangyu-1999.github.io/issues/new'>issues</a>下给我留言评论"
+          或者通过邮箱<a href = '#'>wangyu2021@foxmail.com</a>联系我"
+      - title: "您也可以在该博客项目对应的<a = href = 'https://github.com/wangyu-1999/wangyu-1999.github.io/issues/new'>issues</a>下给我留言评论"
 
   - title: 技术博客
     post_list:
