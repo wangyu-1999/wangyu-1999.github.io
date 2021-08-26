@@ -19,14 +19,30 @@
   />
   <!-- bing搜索 -->
   <meta name="msvalidate.01" content="45E47B187AE16BFA69C0A2CEB21BE29F" />
-
+  <!-- 字节爬虫脚本 -->
+  <script async>
+    (function () {
+      var el = document.createElement("script");
+      el.src =
+        "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?b357f1ed2a688909d06d2cfabe1835bb2680b49105dfb00261c7b4ba68e3607460ee6cf0ba1faa1fd426c5503818ff173d2859afc1f3c0c26a1fdfd487b8b599cce3a6dd9046b785a9d577e900bd16c5";
+      el.id = "ttzz";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(el, s);
+    })(window);
+  </script>
+  <!-- 留言组件，必须加载完才能渲染，不能async -->
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   <title>
     {%- if page.title -%} {{ page.title }} {%- else -%} {{ site.title }} {%-
     endif -%}
   </title>
 
   {%-seo title=false-%} {%-feed_meta-%}
-
+  <!-- 留言样式 -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
+  />
   <link
     rel="shortcut icon"
     type="image/x-icon"
