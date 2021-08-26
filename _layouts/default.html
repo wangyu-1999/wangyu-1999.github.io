@@ -11,42 +11,5 @@
     {%-if site.goat_counter and jekyll.environment == "production"-%}
       {%-include goat_counter.html-%}
     {%-endif-%}
-    <hr />
-    <!-- 留言内容 -->
-    <div>
-      <div id="gitalk-container"></div>
-    </div>
   </body>
-  <script async>
-    // 字节的爬虫脚本
-    (function () {
-      var el = document.createElement("script");
-      el.src =
-        "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?b357f1ed2a688909d06d2cfabe1835bb2680b49105dfb00261c7b4ba68e3607460ee6cf0ba1faa1fd426c5503818ff173d2859afc1f3c0c26a1fdfd487b8b599cce3a6dd9046b785a9d577e900bd16c5";
-      el.id = "ttzz";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(el, s);
-    })(window);
-  </script>
-  <!-- 留言组件 -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
-  />
-  <script
-    async
-    src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"
-  ></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: "0f7f1da779c0bbb2e919",
-      clientSecret: "8f522b0966ba10a95e856d7e8877959bc3f45c8d",
-      repo: "wangyu-1999.github.io", // The repository of store comments,
-      owner: "wangyu-1999",
-      admin: ["wangyu-1999"],
-      id: decodeURI(location.pathname), // Ensure uniqueness and length less than 50
-      distractionFreeMode: false, // Facebook-like distraction free mode
-    });
-    gitalk.render("gitalk-container");
-  </script>
 </html>
