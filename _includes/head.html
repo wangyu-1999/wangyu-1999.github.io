@@ -33,18 +33,24 @@
     href="{{ site.favicon | relative_url }}"
   />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
-  <script>
+  <script async>
     // 字节的爬虫脚本
     (function () {
-      var el = document.createElement('script');
+      var el = document.createElement("script");
       el.src =
-        'https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?b357f1ed2a688909d06d2cfabe1835bb2680b49105dfb00261c7b4ba68e3607460ee6cf0ba1faa1fd426c5503818ff173d2859afc1f3c0c26a1fdfd487b8b599cce3a6dd9046b785a9d577e900bd16c5';
-      el.id = 'ttzz';
-      var s = document.getElementsByTagName('script')[0];
+        "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?b357f1ed2a688909d06d2cfabe1835bb2680b49105dfb00261c7b4ba68e3607460ee6cf0ba1faa1fd426c5503818ff173d2859afc1f3c0c26a1fdfd487b8b599cce3a6dd9046b785a9d577e900bd16c5";
+      el.id = "ttzz";
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(el, s);
     })(window);
   </script>
   <!-- 留言组件 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
+  />
+  <script
+    async
+    src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"
+  ></script>
 </head>
