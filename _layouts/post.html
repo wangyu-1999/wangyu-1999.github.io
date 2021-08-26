@@ -6,9 +6,7 @@ layout: default
 
 <article>
   <p class="post-meta">
-    <time datetime="{{ page.date }}"
-      >{{ page.date | date: site.theme_config.date_format }}</time
-    >
+    <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
   </p>
 
   <h1>{{ page.title }}</h1>
@@ -17,9 +15,18 @@ layout: default
   <hr />
 
   <p>
-    给我留言：<a
-      href="https://github.com/wangyu-1999/wangyu-1999.github.io/issues/new"
-      >issues</a
-    >
+  <div id="gitalk-container"></div>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'GitHub Application Client ID',
+      clientSecret: 'GitHub Application Client Secret',
+      repo: 'GitHub repo',      // The repository of store comments,
+      owner: 'GitHub repo owner',
+      admin: ['GitHub repo owner and collaborators, only these guys can initialize github issues'],
+      id: location.pathname,      // Ensure uniqueness and length less than 50
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+  </script>
   </p>
 </article>
