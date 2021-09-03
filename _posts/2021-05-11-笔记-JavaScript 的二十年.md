@@ -1,7 +1,7 @@
 ---
 layout: post
 category: star
-title: 笔记：JavaScript的二十年
+title: 笔记：JavaScript 的二十年
 ---
 
 最近看到一个讲述 JS 历史的翻译项目，挺有意思的，打算边读边对其中的内容写一些自己的读后感，深入了解一下 JS 的历史
