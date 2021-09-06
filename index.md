@@ -6,4 +6,5 @@ layout: home
 
 ---
 
-<center>Powered by <a href="https://jekyllrb.com/">Jekyll</a> & Designed by <a href="https://github.com/wangyu-1999">Wang Yu</a><center>
+<center>Powered by <a href="https://jekyllrb.com/">Jekyll</a> & Designed by <a href="https://github.com/wangyu-1999">Wang Yu</a>
+</center>
