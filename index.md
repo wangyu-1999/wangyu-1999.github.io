@@ -6,4 +6,4 @@ layout: home
 
 ---
 
-<center>Powered by [Jekyll](https://jekyllrb.com/) & Designed by [riggraz](https://github.com/riggraz/no-style-please) & Modified by [Wang Yu](https://github.com/wangyu-1999/wangyu-1999.github.io)</center>
+<center>Powered by <a href="https://jekyllrb.com/">Jekyll</a> & Designed by <a href="https://github.com/wangyu-1999">Wang Yu</a><center>
