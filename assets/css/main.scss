@@ -230,3 +230,7 @@ center {
     padding: 4rem 2rem;
   }
 }
+// 引用的断行问题修复
+blockquote {
+  word-wrap: break-word;
+}
