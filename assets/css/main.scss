@@ -225,8 +225,7 @@ center {
 @media screen and (max-width: 640px) {
   .w {
     width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
+    padding: 0;
   }
 }
 // 引用的断行问题修复
