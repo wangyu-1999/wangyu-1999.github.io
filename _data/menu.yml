@@ -27,3 +27,11 @@ entries:
       show_more: true
       show_more_text: 查看更多
       show_more_url: \archive\archive2.html
+
+  - title: 收纳盒
+    post_list:
+      limit: 0
+      category: save
+      show_more: true
+      show_more_text: 查看更多
+      show_more_url: \archive\archive3.html
