@@ -5,8 +5,7 @@ a:link {
 }
 a:visited {
   color: #e67e22;
-  cursor: pointer;
-  text-decoration: solid;
+  border-bottom: dotted;
 }
 
 h1,
@@ -19,11 +18,11 @@ li {
   a:link {
     color: black;
     cursor: pointer;
-    text-decoration: underline dotted;
+    text-decoration: none;
+    border-bottom: dotted;
   }
   a:visited {
     color: black;
-    cursor: pointer;
-    text-decoration: underline solid;
+    border-bottom: solid;
   }
 }
