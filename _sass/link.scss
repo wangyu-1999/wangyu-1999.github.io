@@ -1,5 +1,10 @@
-a {
-  color: #ffa801;
+a:link {
+  color: #758086;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:visited {
+  color: #2b4448;
   cursor: pointer;
   text-decoration: none;
 }
@@ -11,9 +16,42 @@ h4,
 h5,
 h6,
 li {
-  a {
+  a:link {
     color: black;
     cursor: pointer;
     text-decoration: underline dotted;
   }
+  a:visited {
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+a::before,
+a::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  content: "";
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+  transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+a::after {
+  width: 90px;
+  height: 90px;
+  border-width: 6px;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
 }
