@@ -3,6 +3,7 @@
 
 @import "no-style-please";
 @import "code-highlight.scss";
+@import "link.scss";
 // 自定义博客修改属性
 // center标签作为图片的注解使用
 center {
@@ -20,8 +21,4 @@ center {
 // 引用的断行问题修复
 blockquote {
   word-wrap: break-word;
-}
-
-a {
-  color: #808e9b;
 }
