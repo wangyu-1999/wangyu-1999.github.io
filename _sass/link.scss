@@ -1,4 +1,4 @@
-a:link {
+a {
   color: #e67e22;
   cursor: pointer;
   text-decoration: none;
@@ -14,11 +14,10 @@ h4,
 h5,
 h6,
 li {
-  a:link {
+  a {
     color: black;
     cursor: pointer;
-    text-decoration: none;
-    border-bottom: dotted;
+    text-decoration: dotted;
   }
   a:visited {
     color: gray;
