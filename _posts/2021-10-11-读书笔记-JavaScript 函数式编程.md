@@ -10,6 +10,10 @@ JavaScript 函数式编程
 
 从 React 魅力四射的 hook 过来，之前备受 JavaScript 中不伦不类的面向对象的折磨，来看看 JavaScript 中函数式编程的实现，希望看完之后能对 hook 和无处不在的高阶组件加深一点理解。
 
+拓展阅读：
+
+[函数式编程指北](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+
 ---
 
 # 目录
@@ -19,8 +23,6 @@ JavaScript 函数式编程
 - [变量的作用域和闭包](#变量的作用域和闭包)
 - [由函数构建函数](#由函数构建函数)
 - [纯度与不变性与更改政策](#纯度与不变性与更改政策)
-- [基于流的编程](#基于流的编程)
-- [无类编程](#无类编程)
 - [常用 Lodash 函数列表](#常用-lodash-函数列表)
 
 ---
@@ -80,6 +82,38 @@ Applicative 编程定义为函数 A 作为参数提供给函数 B 。
 
 Applicative 编程的三个典型的例子是 map、reduce 和 filter。
 
+### 常见错误
+
+函数式编程指北中讲述了一种编程的常见错误：
+
+```javascript
+const hi = name => `Hi ${name}`;
+const greeting = name => hi(name);
+```
+
+greeting 这样的写法是存在很大的问题的，因为实际上 greeting 只是简单的调用了 hi ，如果之后 hi 的参数接口发生了变化，则 greeting 的参数接口也同样要发生变化。
+
+正确的写法是：
+
+```javascript
+const greeting = hi;
+```
+
+在实际的项目代码中，充斥着大量类似的问题：
+
+```javascript
+httpGet('/post/2', json => renderPost(json));
+
+// 把整个应用里的所有 httpGet 调用都改成这样，可以传递 err 参数。
+// httpGet('/post/2', (json, err) => renderPost(json, err));
+```
+
+```javascript
+httpGet('/post/2', renderPost); 
+```
+
+以上这个例子再次展示了这种写法的好处。
+
 ---
 
 ## 变量的作用域和闭包
@@ -91,6 +125,12 @@ Applicative 编程的三个典型的例子是 map、reduce 和 filter。
 ---
 
 ## 由函数构建函数
+
+### 柯里化
+
+curry 的概念非常简单：
+
+> 只传递函数的一部分参数来调用它，让它返回一个函数去处理剩下的参数。
 
 自动柯里化参数：
 
@@ -127,13 +167,59 @@ div(50);
 
 注意这样构造的方法需要注意参数的顺序。
 
-柯里化，部分组合函数（就是固定其中一些参数，需要另外一些剩余参数），拼接函数是三个改造函数的得力手段。
+### 函数组合
 
-需要注意的是拼接函数 Underscore 用的接口是 _.compose , 而 lodash 使用的接口是 _.flow
+以下的代码就是函数的组合范例：
+
+```javascript
+var compose = function(f,g) {
+  return function(x) {
+    return f(g(x));
+  };
+};
+```
+
+函数的组合具有一个良好的性质，组合律：
+
+```javascript
+var associative = compose(f, compose(g, h)) == compose(compose(f, g), h);
+// true
+```
+
+运用这一性质可以写出参数数量可变的 compose 函数来。
+
+组合律的另一大好处是，一个组合出来的函数可以再次被组合，不会有什么限制。
+
+```javascript
+var last = compose(head, reverse);
+var angry = compose(exclaim, toUpperCase);
+var loudLastUpper = (angry, last);
+```
+
+多使用函数组合构造 pointfree 的代码是一种良好的代码实践方式：
+
+```javascript
+var snakeCase = function (word) {
+  return word.toLowerCase().replace(/\s+/ig, '_');
+};
+
+// pointfree
+var snakeCase = compose(replace(/\s+/ig, '_'), toLowerCase);
+```
+
+**需要注意的是拼接函数 Underscore 用的接口是 _.compose , 而 lodash 使用的接口是 _.flow**
+
+三个改造函数的得力手段：
+
+1. 柯里化 - 对应 Lodash 的 curry 方法
+2. 部分组合函数 - 对应 Lodash 的 partical 方法
+3. 函数组合 - 对应 Lodash 的 flow 方法
 
 ---
 
 ## 纯度与不变性与更改政策
+
+### 纯函数
 
 纯函数具有以下属性：
 
@@ -151,6 +237,35 @@ JavaScript 中包含很多可能让函数不“纯”的因素：
 - 参数为对象或数组（因为可以传递对象的引用，所以可能导致不“纯”）
 
 良好的实践是将不“纯”的函数进行拆分，针对纯的部分进行常规的测试，针对不纯的部分测试它的一些特性。
+
+可以通过延迟执行的方式来将不纯的函数转化为纯函数：
+
+```javascript
+var pureHttpCall = memoize(function(url, params){
+  return function() { return $.getJSON(url, params); }
+});
+```
+
+这样的做法单独看起来用处不大，但是结合一些其他的技巧将会产生很大的作用。
+
+纯函数具有很多优秀的特性：
+
+- 纯函数具有较好的可移植性和自文档性。
+- 纯函数可以针对输入进行缓存拓展。
+- 纯函数具有较好的可移植性和自文档性。
+- 纯函数的代码可以并行执行。
+
+### 不变性
+
+JavaScript 的 Object 提供一个 freeze 方法，可以“冻结”对象，还提供 isFrozen 来帮助查看对象是否被冻结。但使用 freeze 来确保不变性有两个问题：
+
+- 在与第三方 api 交互时可能产生错误
+- freeze 是一个浅操作
+
+不可变对象在设计时应该注意：
+
+- 不可变对象在构造时应该固定它们的值，之后就不能继续修改
+- 不可变对象的操作应该返回新的对象
 
 ---
 
@@ -211,6 +326,12 @@ JavaScript 中包含很多可能让函数不“纯”的因素：
 
 - [_.keys(object)](https://www.lodashjs.com/docs/lodash.keys)
   - _.value
+- [_.assign(object, [sources])](https://www.lodashjs.com/docs/lodash.assign)
+  - _.assignIn
+- [_.clone(value)](https://www.lodashjs.com/docs/lodash.clone)
+  - .cloneDeep
+  - .cloneWith
+  - .cloneDeepWith
 
 特殊的包装操作：
 
