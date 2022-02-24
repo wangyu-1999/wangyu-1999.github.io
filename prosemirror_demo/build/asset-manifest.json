@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "../prosemirror_demo/build/static/css/main.69d6d96f.css",
+    "main.js": "../prosemirror_demo/build/static/js/main.5768e08e.js",
+    "static/js/973.92aa4043.chunk.js": "../prosemirror_demo/build/static/js/973.92aa4043.chunk.js",
+    "index.html": "../prosemirror_demo/build/index.html",
+    "main.69d6d96f.css.map": "../prosemirror_demo/build/static/css/main.69d6d96f.css.map",
+    "main.5768e08e.js.map": "../prosemirror_demo/build/static/js/main.5768e08e.js.map",
+    "973.92aa4043.chunk.js.map": "../prosemirror_demo/build/static/js/973.92aa4043.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69d6d96f.css",
+    "static/js/main.5768e08e.js"
+  ]
+}
