@@ -1,9 +1,7 @@
 [submodule "project/fake3d"]
 	path = project/fake3d
 	url = https://github.com/wangyu-1999/fake3d
-	branch = main
 
 [submodule "project/prosemirror-demo"]
 	path = project/prosemirror-demo
 	url = https://github.com/wangyu-1999/prosemirror-demo
-	branch = gh-pages
