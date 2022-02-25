@@ -1,0 +1,3 @@
+[submodule "project/project/fake3d"]
+	path = project/project/fake3d
+	url = https://github.com/wangyu-1999/fake3d
