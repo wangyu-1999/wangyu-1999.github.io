@@ -23,3 +23,25 @@ li {
     color: gray;
   }
 }
+
+code{
+  font-size: 0.7rem;
+}
+
+img{
+  width: 85%;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &::before{
+    content: "☞";
+    font-size: 0.8em;
+    margin-left: -1.6em;
+    margin-right: 0.8em;
+    opacity: 0.3;
+  }
+}
