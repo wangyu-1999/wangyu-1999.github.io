@@ -30,7 +30,7 @@ entries:
 
   - title: 收纳盒
     post_list:
-      limit: 0
+      limit: 5
       category: save
       show_more: true
       show_more_text: 查看更多
