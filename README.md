@@ -99,3 +99,9 @@
 ### [ts 的 .d.ts 和 declare 究竟是干嘛用的](https://blog.csdn.net/qq_34551390/article/details/118800743)
 
 ### [TypeScript Function Syntaxes](https://kentcdodds.com/blog/typescript-function-syntaxes)
+
+### [Solving a Mystery Behavior of parseInt() in JavaScript](https://dmitripavlutin.com/parseint-mystery-javascript/)
+
+## 博客笔记 9 
+### [How to Parse and Annotate PDFs in Node](https://spin.atomicobject.com/2021/05/04/tools-modifying-pdfs/)
+
