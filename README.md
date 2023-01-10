@@ -105,3 +105,18 @@
 ## 博客笔记 9 
 ### [How to Parse and Annotate PDFs in Node](https://spin.atomicobject.com/2021/05/04/tools-modifying-pdfs/)
 
+### [Using a task queue vs. just not waiting for Promise to resolve](https://coreycleary.me/using-a-task-queue-vs-just-not-waiting-for-promise-to-resolve)
+
+## 博客笔记 10
+
+### [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API)
+
+### 随机数算法
+
+- [Introduction to random number generation](https://www.learncpp.com/cpp-tutorial/introduction-to-random-number-generation/)
+- [谈谈梅森旋转：算法及其爆破](https://liam.page/2018/01/12/Mersenne-twister/)
+
+### [React 老矣，我建议大家用用别的框架](https://www.infoq.cn/article/YZMFbo42uyHdps9WiQif)
+
+
+
