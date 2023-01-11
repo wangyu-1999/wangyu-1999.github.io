@@ -63,7 +63,7 @@
 ### [移动 web 1像素边框](https://segmentfault.com/a/1190000007604842)
 ### 使用 chrome 调试
 
-[Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript/)
+### [Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript/)
 ### [防抖和节流](https://juejin.cn/post/7012458353779539999)
 ### [lodash 中文学习拾零之 Chain 篇](https://blog.csdn.net/Soaring_Tiger/article/details/48136871)
 ### [maxin 解释](https://www.zhihu.com/question/39469139/answer/685274627)
@@ -117,6 +117,10 @@
 - [谈谈梅森旋转：算法及其爆破](https://liam.page/2018/01/12/Mersenne-twister/)
 
 ### [React 老矣，我建议大家用用别的框架](https://www.infoq.cn/article/YZMFbo42uyHdps9WiQif)
+
+## 博客笔记 11
+
+### [解决 Gitalk 无法获取 Github Token 问题](https://prohibitorum.top/7cc2c97a15b4.html)
 
 
 
